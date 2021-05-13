@@ -3,3 +3,9 @@ yo hubot-yarn
 git status
 bin/hubot
 exit
+yarn install
+code .
+ env HUBOT_SLACK_TOKEN=xoxb-2070316845841-2057988959667-t49kMPurOb2Oy
+ env HUBOT_SLACK_TOKEN=xoxb-2070316845841-2057988959667-t49kMPurOb2Oy
+env HUBOT_SLACK_TOKEN=xoxb-2070316845841-2057988959667-t49kMPurOb2Oy
+exit
