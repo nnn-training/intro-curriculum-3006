@@ -1,8 +1,8 @@
 'use strict';
 module.exports = robot => {
   robot.hear(/hello>/i, msg => {
-    const user_id = msg.message.user.id;
-    msg.send(`Hello, <@${user_id}>`);
+    const user_name = msg.message.user.name;
+    msg.send(`Hello, <@${user_name}>`);
   });
   robot.hear(/おみくじ/i, msg => {
     const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
