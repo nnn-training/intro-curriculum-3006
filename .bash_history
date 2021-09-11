@@ -32,3 +32,13 @@ ls
 exit
 env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-s8MpMUutQCmYddiIFAKBnyaG bin/hubot --adapter slack
 exit
+yarn install
+env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-s8MpMUutQCmYddiIFAKBnyaG bin/hubot --adapter slack
+env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-s8MpMUutQCmYddiIFAKBnyaG bin/hubot --adapter slack
+ls
+pwe
+pwd
+env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-cwyLA8SOzvVV92kUPzxu6LQJ bin/hubot --adapter slack
+env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-cwyLA8SOzvVV92kUPzxu6LQJ bin/hubot --adapter slack
+env HUBOT_SLACK_TOKEN=xoxb-1564865243874-2457556748274-cwyLA8SOzvVV92kUPzxu6LQJ bin/hubot --adapter slack
+exit
