@@ -1,5 +1,3 @@
-pwd
-yo hubot-yarn
-git status
+history
 bin/hubot
 exit
