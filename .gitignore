@@ -60,5 +60,3 @@ typings/
 # Hubot stuff
 .DS_Store*
 .hubot_history
-
-.bash_history
