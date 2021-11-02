@@ -6,3 +6,5 @@ exit
 yarn install
 code .
 exit
+yarn install
+exit
