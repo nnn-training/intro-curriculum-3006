@@ -8,3 +8,5 @@ code .
 exit
 yarn install
 exit
+yarn install
+exit
