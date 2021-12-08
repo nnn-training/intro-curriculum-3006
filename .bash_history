@@ -5,3 +5,5 @@ bin/hubot
 exit
 yarn install
 exit
+yarn install
+exit
