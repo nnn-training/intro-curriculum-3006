@@ -14,5 +14,8 @@
   },
   "engines": {
     "node": "> 8.0.0"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:ntk221/intro-curriculum-3006.git",
+  "license": "MIT"
 }
