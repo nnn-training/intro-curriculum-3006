@@ -14,10 +14,9 @@ app.message(/hello/i, ({message, say}) => {
   say('こんにちは！');
 });
 
-const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
-const lot = lots[Math.floor(Math.random() * lots.length)];
-
 app.message('おみくじ', ({message, say}) => {
+  const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
   say(`今日の運勢は ${lot}です！`);
 });
 
