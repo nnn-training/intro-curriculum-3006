@@ -4,4 +4,4 @@ services:
     build: .
     tty: true
     volumes:
-      - .:/bot-study
+      - .:/intro-curriculum-3006
