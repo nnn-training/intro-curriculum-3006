@@ -1,17 +1,13 @@
 'use strict';
-const bolt = require('@slack/bolt');
-const dotenv = require ('dotenv');
-dotenv.config();
-
-const app = new bolt.App({
-  token: process.env.SLACK_BOT_TOKEN,
-  appToken: process.env.SLACK_APP_TOKEN,
-  socketMode: true,
-  logLevel: 'debug'
-});
-
-app.message(/hello/i, ({message, say}) => {
-  say('こんにちは！');
-});
-
-app.start();
+module.exports = robot => {
+  robot.hear(/hello>/i, msg => {
+    const user_id = msg.message.user.id;
+    msg.send(`Hello, + ${user_id}`);
+  });
+  robot.hear(/おみくじ/i, msg => {
+    const user_id = msg.message.user.id;
+    const lots = ['大吉', '吉', '中吉', '小吉', '凶'];
+    const lot = lots[Math.floor(Math.random()* lots.length)];
+    msg.send(`${lot}, ${user_id}`);
+  })
+};
