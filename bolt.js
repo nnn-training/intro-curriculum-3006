@@ -10,8 +10,8 @@ const app = new bolt.App({
   logLevel: 'debug'
 });
 
-app.message(/hello/i, ({message, say}) => {
-  say('こんにちは！');
+app.message(/おみくじ/i, ({message, say}) => {
+  say(`${lot}, <@${message.user}>`);
 });
 
 app.start();
