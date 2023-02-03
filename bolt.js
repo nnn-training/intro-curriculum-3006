@@ -9,9 +9,10 @@ const app = new bolt.App({
   socketMode: true,
   logLevel: 'debug'
 });
-
-app.message(/hello/i, ({message, say}) => {
-  say('こんにちは！');
+const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+app.message(/おみくじ/, ({message, say}) => {
+  const lot = lots[Math.floor(Math.random() * lots.length)];
+  say(`${lot},<@${message.user}>さん`);
 });
 
 app.start();
