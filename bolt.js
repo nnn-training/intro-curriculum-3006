@@ -17,7 +17,7 @@ app.message(/hello/i, ({message, say}) => {
 
 app.message('おみくじ', ({message, say}) => {
   const lot = lots[Math.floor(Math.random() * lots.length)];
-  say(lot);
+  say(`${lot}, <@${message.user}>`);
 });
 
 app.start();
