@@ -10,9 +10,9 @@ const app = new bolt.App({
   LogLevel: 'debug'
 });
 
-app.message(/おみくじ/i, ({message, say}) => {
+app.message(/おみくじ/i, ({ message, say }) => {
   const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
-  const  lot = lots[Math.floor(Math.random() *  lots.length)];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
   say(`${lot}, <@${message.user}>`);
 });
 
