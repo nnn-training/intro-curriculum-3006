@@ -1,6 +1,9 @@
 'use strict';
 const bolt = require('@slack/bolt');
-const dotenv = require ('dotenv');
+const dotenv = require('dotenv');
+const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+const lot = lots[Math.floor(Math.random() * lots.length)];
+
 dotenv.config();
 
 const app = new bolt.App({
@@ -10,8 +13,12 @@ const app = new bolt.App({
   logLevel: 'debug'
 });
 
-app.message(/hello/i, ({message, say}) => {
+app.message(/hello/i, ({ message, say }) => {
   say('こんにちは！');
 });
+
+app.message('おみくじ', ({ message, say})=>{
+  say(`${lot},<@${message.user}>`);
+})
 
 app.start();
