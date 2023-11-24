@@ -9,9 +9,18 @@ const app = new bolt.App({
   socketMode: true,
   logLevel: 'debug'
 });
+/**
+ * 下記constのコードをここに
+ * let lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+ * let lot = lots[Math.floor(Math.random() * lots.length)];
+ * とすると「末吉」を連発する
+ */
 
-app.message(/hello/i, ({message, say}) => {
-  say('こんにちは！');
+app.message(/おみくじ/i, ({message, say}) => {
+  const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
+  say(`<@${message.user}>さんの運勢は${lot}です。`);
 });
+
 
 app.start();
