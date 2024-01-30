@@ -14,4 +14,10 @@ app.message(/hello/i, ({message, say}) => {
   say('こんにちは！');
 });
 
+app.message(/おみくじ/i, ({message, say}) => {
+  let lots = ['大吉','中吉','小吉','末吉','凶'];
+  let lot = lots[Math.floor(Math.random() * lots.length)];
+  say(lot + ` <@${message.user}>`);
+});
+
 app.start();
