@@ -4,4 +4,4 @@ services:
     build: .
     tty: true
     volumes:
-      - .:/bot-study
+      - .:/bot-study2
