@@ -509,10 +509,10 @@ hubot-rules@^1.0.0:
   resolved "https://registry.yarnpkg.com/hubot-rules/-/hubot-rules-1.0.0.tgz#35a5d0acd27a3fa873e796ba29f0928f2eb8398c"
   integrity sha512-IXeTYp6aK25Hgio8ezYr9vruLt1dICL9+kImaXefbfanSjNiNDvltNZfwANqeBx4Zm92A6yi36XxbWR5ZS5kNg==
 
-hubot-slack@^4.9.0:
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/hubot-slack/-/hubot-slack-4.9.0.tgz#5b22caf5dd398cc80d5c2f1c2ec16b22f777fa8d"
-  integrity sha512-liNHxyii/XZe2ypXP8IEPas5paJwVVRVZYMcVy3cHlIYzRaY+99ayBptEI+KWfqzhzxnLGV2aGjHUjolBsl0iA==
+hubot-slack@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/hubot-slack/-/hubot-slack-4.10.0.tgz#da5db24782c74d17bc1d9fa60a62d3f9c4f009a9"
+  integrity sha512-xpygVMuepOsSOrvkGukd7HS8cFRkiFAr7ivnF7dqfd3y2tf66eQuj9ouAONxCaTA4dLPOkOjSZJDbYLki9K9eg==
   dependencies:
     "@slack/client" "3.16.1-sec.2"
     bluebird "^3.5.1"
