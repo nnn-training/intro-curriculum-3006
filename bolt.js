@@ -1,7 +1,5 @@
 'use strict';
 const bolt = require('@slack/bolt');
-const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
-const lot = lots[Math.floor(Math.random() * lots.length)];
 
 const app = new bolt.App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -15,6 +13,8 @@ app.message(/hello/i, ({message, say}) => {
 });
 
 app.message(/おみくじ/, ({message, say}) => {
+  const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
   say(`${lot}, <@${message.user}>さん！`);
 })
 
