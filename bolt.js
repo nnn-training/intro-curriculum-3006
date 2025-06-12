@@ -12,4 +12,16 @@ app.message(/hello/i, ({message, say}) => {
   say(`こんにちは！ <@${message.user}>さん`);
 });
 
+app.message('おみくじ', ({message, say}) => {
+  const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
+  if(lot === '大吉') {
+    say(`${lot}が出ました！！<@${message.user}>さん`);
+  } else if(lot === '凶') {
+    say(`${lot}が出てしまいました。<@${message.user}>さん`);
+  } else {
+    say(`${lot}が出ました！<@${message.user}>さん`);
+  }
+});
+
 app.start();
