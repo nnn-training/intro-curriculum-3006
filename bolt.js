@@ -12,4 +12,16 @@ app.message(/hello/i, ({message, say}) => {
   say(`こんにちは！ <@${message.user}>さん`);
 });
 
+const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+const lot = lots[Math.floor(Math.random() * lots.length)];
+app.message(/おみくじ/, ({message, say}) => {
+  say(`${lot} です,<@${message.user}>さん`);
+});
+
+const oyasumis = ["good night", "night", "sweet dreams", "sleep tight", "have a good dream"]
+const oyasumi = oyasumis[Math.floor(Math.random() * oyasumis.length)]
+app.message(/おやすみ/, ({message, say}) => {
+  say(`${oyasumi}`)
+})
+
 app.start();
