@@ -6,10 +6,15 @@ const app = new bolt.App({
   appToken: process.env.SLACK_APP_TOKEN,
   socketMode: true,
   logLevel: 'debug'
-});
+});''
 
-app.message(/hello/i, ({message, say}) => {
-  say(`こんにちは！ <@${message.user}>さん`);
+const omikuji = ['大吉', '中吉', '吉', '末吉', '凶'];
+
+
+
+app.message(/おみくじ/i, ({message, say}) => {
+  const results = Math.floor(Math.random() * omikuji.length);
+  say(`${omikuji[results]} <@${message.user}>`);
 });
 
 app.start();
