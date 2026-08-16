@@ -1,4 +1,6 @@
 'use strict';
+
+// Helloと送ると返信してくれるBOTを作成
 const bolt = require('@slack/bolt');
 
 const app = new bolt.App({
@@ -10,6 +12,13 @@ const app = new bolt.App({
 
 app.message(/hello/i, ({message, say}) => {
   say(`こんにちは！ <@${message.user}>さん`);
+});
+
+// おみくじを作成
+app.message('おみくじ', ({message, say}) => {
+  const lots = ['大吉', '吉', '中吉', '末吉', '凶'];
+  const lot = lots[Math.floor(Math.random() * lots.length)];
+  say(`${lot},  <@${message.user}>さん`);
 });
 
 app.start();
